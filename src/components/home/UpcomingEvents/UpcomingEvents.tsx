@@ -1,26 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { SlCalender } from 'react-icons/sl';
 import { FaLocationDot } from 'react-icons/fa6';
 
 import { StyledSection, Overlay, Content, Timer, EventDetails, Box } from './UpcomingEvents.styled';
-import Button from 'src/components/ui/Button/Button';
+import Button from '@/components/ui/Button/Button';
+
+interface ICountdownTime {
+  day: number;
+  year: number;
+  month: number;
+  hour: number;
+  minute: number;
+  second: number;
+}
 
 const UpcomingEvents = () => {
-  const [countdownTime, setCountdownTime] = useState({
+  const [countdownTime, setCountdownTime] = useState<ICountdownTime>({
     day: 0,
+    month: 0,
+    year: 0,
     hour: 0,
     minute: 0,
     second: 0,
   });
-  const countdownAt = {
-    day: 4,
-    month: 11,
-    year: 2023,
-    hour: 0,
-    minute: 0,
-    second: 0,
-  };
+  const countdownAt = useMemo<ICountdownTime>(
+    () => ({
+      day: 4,
+      month: 11,
+      year: 2023,
+      hour: 0,
+      minute: 0,
+      second: 0,
+    }),
+    []
+  );
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -46,6 +60,8 @@ const UpcomingEvents = () => {
         hour,
         minute,
         second,
+        month: countdownAt.month,
+        year: countdownAt.year,
       });
     }, 1000);
 

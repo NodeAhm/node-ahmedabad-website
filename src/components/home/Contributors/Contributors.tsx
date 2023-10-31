@@ -20,7 +20,7 @@ const Contributors = () => {
         </SectionHeader>
         <CardWrapper>
           <Card>
-            <StyledImg src={profileImg1} />
+            <StyledImg alt="" src={profileImg1} />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maxime tenetur
               laudantium aliquam suscipit esse error distinctio exercitationem optio illum rem, vero
@@ -30,7 +30,7 @@ const Contributors = () => {
             <h4>Kenny</h4>
           </Card>
           <Card>
-            <StyledImg src={profileImg2} />
+            <StyledImg alt="" src={profileImg2} />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maxime tenetur
               laudantium aliquam suscipit esse error distinctio exercitationem optio illum rem, vero
@@ -40,7 +40,7 @@ const Contributors = () => {
             <h4>Stefan</h4>
           </Card>
           <Card>
-            <StyledImg src={profileImg3} />
+            <StyledImg alt="" src={profileImg3} />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maxime tenetur
               laudantium aliquam suscipit esse error distinctio exercitationem optio illum rem, vero

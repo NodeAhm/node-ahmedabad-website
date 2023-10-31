@@ -5,7 +5,7 @@ import { StyledSection, Card, CardContent } from './Cards.styled';
 import image1 from '../../../assets/images/image1.jpg';
 import image2 from '../../../assets/images/image2.jpg';
 import image3 from '../../../assets/images/image3.jpg';
-import Icons from 'src/components/home/Cards/Icons/Icons';
+import Icons from '@/components/home/Cards/Icons/Icons';
 // import UpcomingEvent from '../UpcomingEvent/UpcomingEvent'
 
 const data = [
@@ -36,7 +36,7 @@ const Cards = () => {
         {data.map((el, index) => (
           <Card key={index}>
             <div></div>
-            <Image src={el.image} />
+            <Image alt={el.title} src={el.image} />
             <CardContent>
               <h1>{el.index}</h1>
               <h3>{el.title}</h3>

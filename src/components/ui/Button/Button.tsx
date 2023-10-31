@@ -1,6 +1,10 @@
 import { StyledButton } from './Button.styles';
 
-const Button = ({ buttonText = '' }) => {
+interface ButtonProps {
+  buttonText: string;
+}
+
+const Button = ({ buttonText = '' }: ButtonProps) => {
   return <StyledButton>{buttonText}</StyledButton>;
 };
 
