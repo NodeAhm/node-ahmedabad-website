@@ -5,6 +5,7 @@ export const StyledSection = styled.section`
   position: relative;
   width: 100%;
   height: 600px;
+  background-size: cover;
   background-image: url(${upcomingEvents.src});
   color: ${({ theme }) => theme.colors.thirdColor};
 `;
